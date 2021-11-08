@@ -25,12 +25,15 @@
 <script>
 import AppHeader from '@/components/AppHeader'
 import HangmanForm from '@/components/HangmanForm'
+import HangmanPlay from '@/components/HangmanPlay'
 
 export default {
   name: 'HangmanGame',
   components: {
     AppHeader,
     HangmanForm,
+    HangmanPlay,
+
   },
   data() {
     return {
