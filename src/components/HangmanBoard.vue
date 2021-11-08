@@ -4,11 +4,11 @@
       class="board__button"
       v-for="(letter,key) in 'abcdefghijklmnopqrstuvwxyz'"
       :key="key"
-      :disable="validateLetter(letter)"
+      :disabled="validateLetter(letter)"
+      @click="setPlay(letter)"
     >
       {{letter}}
     </button>
-
   </div>
 </template>
 
@@ -17,7 +17,8 @@ export default {
   name: 'HangmanBoard',
   props: {
     letters: Array,
-    validateLetter: String,
+    validateLetter: Function,
+    setPlay: Function,
   },
 }
 </script>
@@ -29,5 +30,6 @@ export default {
   margin 5px
   border-radius 5px
   cursor pointer
+  text-transform uppercase
 
 </style>
