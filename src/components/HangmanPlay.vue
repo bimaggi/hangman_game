@@ -1,11 +1,15 @@
 <template>
   <div class="word">
+    <hangman-error
+      :error="error"
+    />
     <div class="play__words">
       <div
         class="play__word"
         v-for="(letter,key) in isWord" :key="key"
       >
-        {{validateLetter(letter) ? letter : ''}}
+        {{(validateLetter(letter)) ? letter : ''}}
+        <!--{{(validateLetter(letter) || stage === 'hanged') ? letter : ''}}-->
       </div>
     </div>
     <div
@@ -15,8 +19,10 @@
     </div>
     <div>
       <hangman-board
-       :letters="letters"
-       :validateLetter="validateLetter"
+        :letters="letters"
+        :validateLetter="validateLetter"
+        :setPlay="setPlay"
+        :error="error"
       />
     </div>
   </div>
@@ -24,6 +30,7 @@
 
 <script>
 import HangmanBoard from '@/components/HangmanBoard'
+import HangmanError from '@/components/HangmanError'
 
 export default {
   name: 'HangmanPlay',
@@ -31,11 +38,14 @@ export default {
     isWord: String,
     isTip: String,
     error: Number,
-    validateLetter: String,
+    validateLetter: Function,
     letters: Array,
+    stage: String,
+    setPlay: Function,
   },
   components: {
     HangmanBoard,
+    HangmanError,
   },
 }
 </script>
