@@ -3,6 +3,7 @@
     <hangman-modal
       v-if="finalMessage"
       :finalMessage="finalMessage"
+      :restart="restart"
       />
     <app-header/>
     <section
@@ -92,6 +93,18 @@ export default {
         this.finalMessage = 'Parabéns, você se livrou de ser enforcado!'
       }
     },
+    restart() {
+      window.location.reload()
+    },
   },
 }
 </script>
+
+<style lang="stylus">
+.hangman
+  display flex
+  flex-direction column
+  align-items center
+  justify-content center
+
+</style>

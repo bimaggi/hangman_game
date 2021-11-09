@@ -1,7 +1,7 @@
 <template>
   <div class="error">
     <img
-      :src="`https://raw.githubusercontent.com/william-costa/wdev-hangman-game-resources/master/images/hangman/${error}.svg`"
+      :src="require(`@/assets/${error}.png`)"
       class="error__image"
       >
   </div>
@@ -17,6 +17,12 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.error
+  display flex
+  align-items center
+  justify-content center
+
 .error__image
   width 200px
+  text-align center
 </style>
