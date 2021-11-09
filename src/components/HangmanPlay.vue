@@ -8,7 +8,7 @@
         class="play__word"
         v-for="(letter,key) in isWord" :key="key"
       >
-        {{(validateLetter(letter)) ? letter : ''}}
+        {{(validateLetter(letter) || finalMessage) ? letter : ''}}
         <!--{{(validateLetter(letter) || stage === 'hanged') ? letter : ''}}-->
       </div>
     </div>
@@ -42,6 +42,7 @@ export default {
     letters: Array,
     stage: String,
     setPlay: Function,
+    finalMessage: String,
   },
   components: {
     HangmanBoard,
@@ -66,4 +67,8 @@ export default {
   justify-content center
   align-items center
 
+.play__tip
+  text-align center
+  margin-top 20px
+  letter-spacing 8px
 </style>

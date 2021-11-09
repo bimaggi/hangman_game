@@ -23,6 +23,7 @@ export default {
   name: 'HangmanModal',
   props: {
     finalMessage: String,
+    restart: Function,
   },
 }
 </script>
@@ -35,17 +36,24 @@ export default {
   bottom 0
   left 0
   right 0
-  background-color rgba(#fff, .8 )
+  background-color rgba(#FFFFE0, .8 )
   display flex
   flex-direction column
-  justify-content center
   align-items center
 
 .modal__message
-  background-color green
+  width 100%
+  text-align center
+  margin-top 120px
+  letter-spacing 5px
 
 .modal__button
+  margin-top: 16%
   cursor pointer
+  border 2px solid black
+  border-radius 5px
+  letter-spacing 4px
+  background-color rgba(#8B4513, .4)
 
 .modal--fade-enter, .modal--fade--leave-active
   opacity 0
