@@ -4,6 +4,7 @@
       v-if="finalMessage"
       :finalMessage="finalMessage"
       :restart="restart"
+      :isWord="isWord"
       />
     <app-header/>
     <section
@@ -82,7 +83,7 @@ export default {
       this.error += 1
       // enforcado
       if (this.error === 6) {
-        this.finalMessage = 'Que pena você foi enforcado!'
+        this.finalMessage = 'Que pena, você foi enforcado!'
       }
     },
     validateWinner() {
@@ -102,9 +103,6 @@ export default {
 
 <style lang="stylus">
 .hangman
-  display flex
+  adjustments()
   flex-direction column
-  align-items center
-  justify-content center
-
 </style>

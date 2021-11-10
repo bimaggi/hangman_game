@@ -14,8 +14,13 @@ export default {
 
 <style lang="stylus" scoped>
 .header
-  margin-top 3%
+  margin-top 6%
 
 .header__title
   letter-spacing 10px
+  @media screen and (max-width $mobile)
+    letter-spacing $spacing
+    width 100%
+    font-size 35px
+    margin-top 10%
 </style>

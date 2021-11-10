@@ -98,19 +98,31 @@ export default {
 
 .word__title
   margin-bottom: 2%
+  @media screen and (max-width $mobile)
+    font-size 25px
+
 .input
   margin-bottom 20px
-  border-radius 5px
+  border-radius $radius
   width 100%
-  letter-spacing 6px
-  border 3px solid black
+  letter-spacing $spacing
+  border $border
   background-color transparent
+  @media screen and (max-width $mobile)
+    width 90%
+    margin-top: 3%
 
 .button
   width 60%
-  letter-spacing 5px
+  letter-spacing $spacing
   background-color transparent
-  border 3px solid black
-  border-radius 5px
+  border $border
+  border-radius $radius
   cursor pointer
+  @media screen and (max-width $mobile)
+    width 50%
+    font-size 25px
+    padding: 1%
+    margin-top 3%
+
 </style>

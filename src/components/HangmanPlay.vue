@@ -52,23 +52,32 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.word
+  max-width 100%
+
 .play__words
-  display flex
   text-transform uppercase
-  text-align center
-  justify-content center
+  adjustments()
+  @media screen and (max-width $mobile)
+    margin-top 0%
+    flex-wrap wrap
+    padding 0 5px 0 5px
 
 .play__word
-  display flex
+  adjustments()
   border-bottom 1px solid black
   margin 0px 5px
   width 30px
   height @width
-  justify-content center
-  align-items center
 
 .play__tip
   text-align center
   margin-top 20px
-  letter-spacing 8px
+  letter-spacing $spacing
+  @media screen and (max-width $mobile)
+    adjustments()
+    width 90%
+    margin-top 5px
+    margin-bottom 0
+
 </style>

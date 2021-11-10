@@ -18,11 +18,14 @@ export default {
 
 <style lang="stylus" scoped>
 .error
-  display flex
-  align-items center
-  justify-content center
+  adjustments()
+  @media screen and (max-width $mobile)
+    margin-top 0
+    margin-bottom 0
 
 .error__image
   width 200px
   text-align center
+  @media screen and (max-width $mobile)
+    width 180px
 </style>
