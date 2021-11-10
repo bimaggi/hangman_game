@@ -29,15 +29,16 @@ export default {
   flex-wrap wrap
   margin auto
   margin-top 15px
+  margin-bottom 5%
 
  .board__button
   width 40px
   height @width
   margin 5px
-  border-radius 5px
+  border-radius $radius
   cursor pointer
   text-transform uppercase
   background-color transparent
-  border 2px solid black
+  border $border
 
 </style>
