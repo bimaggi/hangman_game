@@ -2,8 +2,15 @@
  "stylus": "^0.54.8",
  "stylus-loader": "^3.0.2",
  -->
- 
 # hangman_game
+![]('/home/bimaggi/Downloads/Design sem nome.pdf')
+
+## Made with
+* Vue.js
+
+## Tools used
+* eslint
+
 
 ## Project setup
 ```

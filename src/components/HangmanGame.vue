@@ -44,7 +44,6 @@ export default {
     HangmanForm,
     HangmanPlay,
     HangmanModal,
-
   },
   data() {
     return {
