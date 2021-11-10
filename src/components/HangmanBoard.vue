@@ -28,8 +28,7 @@ export default {
   display flex
   flex-wrap wrap
   margin auto
-  margin-top 15px
-  margin-bottom 5%
+  margin-top 10px
 
  .board__button
   width 40px

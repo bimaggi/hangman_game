@@ -25,12 +25,14 @@
         :error="error"
       />
     </div>
+     <app-footer/>
   </div>
 </template>
 
 <script>
 import HangmanBoard from '@/components/HangmanBoard'
 import HangmanError from '@/components/HangmanError'
+import AppFooter from '@/components/AppFooter'
 
 export default {
   name: 'HangmanPlay',
@@ -47,6 +49,7 @@ export default {
   components: {
     HangmanBoard,
     HangmanError,
+    AppFooter,
   },
 }
 </script>
