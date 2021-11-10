@@ -19,7 +19,7 @@ export default {
 <style lang="stylus" scoped>
  .footer
   text-align: center
-  margin-top 5%
+  margin-top 1%
   font-size 16px
   font-family 'sans-serif'
   @media screen and (max-width $mobile)
